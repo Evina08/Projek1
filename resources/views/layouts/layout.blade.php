@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -8,7 +7,6 @@
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <meta content="Say No To Cyber Bullying" name="keywords">
         <meta content="Say No To Cyber Bullying" name="description">
-
         <!-- Favicon -->
         <link href="img/logo.png" rel="icon">
 
@@ -28,11 +26,11 @@
     <body>
         <div class="wrapper">
             <!-- Header Start -->
-            <div class="header home">
+            <div class="header">
                 <div class="container-fluid">
                     <div class="header-top row align-items-center">
                         <div class="col-lg-3">
-                            <div class="brand">
+                        <div class="brand">
                                 <a href="#">
                                     NoCyb
                                     
@@ -40,7 +38,7 @@
                             </div>
                         </div>
                         <div class="col-lg-9">
-                            <div class="topbar">
+                        <div class="topbar">
                                 <div class="topbar-col">
                                     <a href="tel:+85960208432"><i class="fa fa-phone-alt"></i>+85960208432</a>
                                 </div>
@@ -49,11 +47,11 @@
                                 </div>
                                 <div class="topbar-col">
                                     <div class="topbar-social">
-                                        <a href="#"><i class="fab fa-twitter"></i></a>
-                                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                        <a href="#"><i class="fab fa-youtube"></i></a>
-                                        <a href="#"><i class="fab fa-instagram"></i></a>
-                                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                        <a href=""><i class="fab fa-twitter"></i></a>
+                                        <a href=""><i class="fab fa-facebook-f"></i></a>
+                                        <a href=""><i class="fab fa-youtube"></i></a>
+                                        <a href=""><i class="fab fa-instagram"></i></a>
+                                        <a href=""><i class="fab fa-linkedin-in"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -65,21 +63,16 @@
 
                                 <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                                     <div class="navbar-nav ml-auto">
-                                        <a href="/home" class="nav-item nav-link active">Home</a>
-                                        <a href="/edukasi" class="nav-item nav-link">Edukasi</a>
+                                        <a href="/home" class="nav-item nav-link ">Home</a>
+                                        <a href="/edukasi" class="nav-item nav-link active">Edukasi</a>
                                         <a href="service.html" class="nav-item nav-link">Filter Kata</a>
                                         <a href="portfolio.html" class="nav-item nav-link">Chatting</a>
                                         <a href="single.html" class="nav-item nav-link">Setting</a>
                                         <a href="contact.html" class="nav-item nav-link">Contact</a>
-                                        <!-- <div class="nav-item dropdown">
-                                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Dropdown</a>
-                                            <div class="dropdown-menu">
-                                                <a href="#" class="dropdown-item">Sub Item 1</a>
-                                                <a href="#" class="dropdown-item">Sub Item 2</a>
-                                            </div>
-                                        </div> -->
-                                        <!-- <a href="#" class="btn">Get A Quote</a> -->
-                                        <ul class="navbar-nav ml-auto">
+                                       
+                                    </div>
+                                </div>
+                                <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
@@ -110,36 +103,6 @@
                             </li>
                         @endguest
                     </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="hero row align-items-center">
-                        <div class="col-md-7">
-                            <h2>Be A Good Person</h2>
-                            <h2><span>Be</span> Yourself</h2>
-                            <p>Life would be meaningless,if we have a meaning for others.</p>
-                            <a class="btn" href="">Explore </a>
-                        </div>
-                        <div class="col-md-5">
-                            <div class="form">
-                                <h3>Write Your Quotes!</h3>
-                                <form>
-                                    <input class="form-control" type="text" placeholder="Your Name">
-                                    
-                                    <!-- <div class="control-group">
-                                        <select class="custom-select">
-                                            <option selected>Choose a service</option>
-                                            <option value="1">House Cleaning</option>
-                                            <option value="2">Apartment Cleaning</option>
-                                            <option value="3">Office Cleaning</option>
-                                        </select>
-                                    </div> -->
-                                    <textarea class="form-control" placeholder="Your Quotes"></textarea>
-                                    <button class="btn btn-block">Write Quotes</button>
-                                </form>
                             </div>
                         </div>
                     </div>
@@ -148,11 +111,9 @@
             <!-- Header End -->
             
             
-           @yield('content')
-            <!-- Blog End -->
+            <!-- Page Header Start -->
+            @yield('content')
 
-
-            <!-- Footer Start -->
             <div class="footer">
                 <div class="container">
                     <div class="row">
@@ -240,4 +201,3 @@
         <script src="js/main.js"></script>
     </body>
 </html>
-
