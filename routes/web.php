@@ -21,5 +21,20 @@ Route::get('/edukasi', function () {
     return view('edukasi');
 });
 Route::get('/artikel', function () {
-    return view('artikel');
+    return view('artikel.artikel');
+});
+Route::get('/artikel2', function () {
+    return view('artikel.artikel2');
+});
+Route::get('/artikel3', function () {
+    return view('artikel.artikel3');
+});
+Route::get('/artikel4', function () {
+    return view('artikel.artikel4');
+});
+Route::get('/artikel5', function () {
+    return view('artikel.artikel5');
+});
+Route::get('/artikel6', function () {
+    return view('artikel.artikel6');
 });

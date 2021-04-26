@@ -45,8 +45,8 @@
                                 <figure>
                                     <img src="img/efek.jpg" alt="Portfolio Image">
                                     <a href="img/efek.jpg" class="link-preview" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                    <a href="#" class="link-details"><i class="fa fa-link"></i></a>
-                                    <a class="portfolio-title" href="#">Efek Cyber Bullying</a>
+                                    <a href="/artikel2" class="link-details"><i class="fa fa-link"></i></a>
+                                    <a class="portfolio-title" href="/artikel2">Efek Cyber Bullying</a>
                                 </figure>
                             </div>
                         </div>
@@ -55,8 +55,38 @@
                                 <figure>
                                     <img src="img/kasus.jpg" alt="Portfolio Image">
                                     <a href="img/kasus.jpg" class="link-preview" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                    <a href="#" class="link-details"><i class="fa fa-link"></i></a>
-                                    <a class="portfolio-title" href="#">Kasus Cyber Bullying</a>
+                                    <a href="/artikel3" class="link-details"><i class="fa fa-link"></i></a>
+                                    <a class="portfolio-title" href="/artikel3">Kasus Cyber Bullying</a>
+                                </figure>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item completed">
+                            <div class="portfolio-wrap">
+                                <figure>
+                                    <img src="img/hukum.jpg" alt="Portfolio Image">
+                                    <a href="img/hukum.jpg" class="link-preview" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                                    <a href="/artikel4" class="link-details"><i class="fa fa-link"></i></a>
+                                    <a class="portfolio-title" href="/artikel4">Hukum Cyberbullying?</a>
+                                </figure>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item ongoing">
+                            <div class="portfolio-wrap">
+                                <figure>
+                                    <img src="img/besar.jpg" alt="Portfolio Image">
+                                    <a href="img/besar.jpg" class="link-preview" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                                    <a href="/artikel5" class="link-details"><i class="fa fa-link"></i></a>
+                                    <a class="portfolio-title" href="/artikel5">Negara dengan Kasus Cyber Bullying Tertinggi</a>
+                                </figure>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item upcoming">
+                            <div class="portfolio-wrap">
+                                <figure>
+                                    <img src="img/platform.jpg" alt="Portfolio Image">
+                                    <a href="img/platform.jpg" class="link-preview" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                                    <a href="/artikel6" class="link-details"><i class="fa fa-link"></i></a>
+                                    <a class="portfolio-title" href="/artikel6">Platform Cyber Bullying Tertinggi</a>
                                 </figure>
                             </div>
                         </div>
