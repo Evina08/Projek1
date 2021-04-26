@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8">
         <title>NoCyb - Say No To Cyber Bullying</title>
-        
+
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <meta content="Say No To Cyber Bullying" name="keywords">
         <meta content="Say No To Cyber Bullying" name="description">
@@ -14,7 +14,7 @@
 
         <!-- Google Font -->
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400&display=swap" rel="stylesheet">
-        
+
         <!-- CSS Libraries -->
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -35,7 +35,6 @@
                             <div class="brand">
                                 <a href="#">
                                     NoCyb
-                                    
                                 </a>
                             </div>
                         </div>
@@ -80,75 +79,74 @@
                                         </div> -->
                                         <!-- <a href="#" class="btn">Get A Quote</a> -->
                                         <ul class="navbar-nav ml-auto">
-                        <!-- Authentication Links -->
-                        @guest
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                            </li>
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
-                            @endif
-                        @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }} <span class="caret"></span>
-                                </a>
+                                            <!-- Authentication Links -->
+                                            @guest
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                                </li>
+                                                @if (Route::has('register'))
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                                    </li>
+                                                @endif
+                                                @else
+                                                    <li class="nav-item dropdown">
+                                                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                                            {{ Auth::user()->name }} <span class="caret"></span>
+                                                        </a>
 
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
+                                                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                                            <a class="dropdown-item" href="{{ route('logout') }}"
+                                                            onclick="event.preventDefault();
+                                                                            document.getElementById('logout-form').submit();">
+                                                                {{ __('Logout') }}
+                                                            </a>
 
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
-                        @endguest
-                    </ul>
+                                                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                                                @csrf
+                                                            </form>
+                                                        </div>
+                                                    </li>
+                                            @endguest
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="hero row align-items-center">
                         <div class="col-md-7">
-                            <h2>Be A Good Person</h2>
-                            <h2><span>Be</span> Yourself</h2>
+                            <h2><b>STOP Cyberbullying!</b></h2>
+                            <h2><span>Be A Good</span> Person</h2>
                             <p>Life would be meaningless,if we have a meaning for others.</p>
                             <a class="btn" href="">Explore </a>
                         </div>
-                        <div class="col-md-5">
+                        <!--<div class="col-md-5">
                             <div class="form">
                                 <h3>Write Your Quotes!</h3>
                                 <form>
                                     <input class="form-control" type="text" placeholder="Your Name">
-                                    
-                                    <!-- <div class="control-group">
+
+                                    <div class="control-group">
                                         <select class="custom-select">
                                             <option selected>Choose a service</option>
                                             <option value="1">House Cleaning</option>
                                             <option value="2">Apartment Cleaning</option>
                                             <option value="3">Office Cleaning</option>
                                         </select>
-                                    </div> -->
+                                    </div>
                                     <textarea class="form-control" placeholder="Your Quotes"></textarea>
                                     <button class="btn btn-block">Write Quotes</button>
                                 </form>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
             <!-- Header End -->
-            
-            
-           @yield('content')
+            @yield('content')
+
             <!-- Blog End -->
 
 
@@ -224,7 +222,7 @@
                 </div>
             </div>
             <!-- Footer End -->
-            
+
             <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
         </div>
 
