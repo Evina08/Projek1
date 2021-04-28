@@ -22,7 +22,6 @@
         <div class="row">
             <div class="col-12">
                 <center> <img class="img-fluid rounded" src="img/besar.jpg" alt="Image" height="800" width="500"> </center>
-
                 <h2>Kasus Cyberbullying Tertinggi di Negara?</h2>
 
                 <p>

@@ -15,6 +15,7 @@
 
 Auth::routes();
 
+Route::group(['middleware' => ['auth','cekLevel:user']],function(){
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/', 'HomeController@index');
 Route::get('/edukasi', function () {
@@ -37,4 +38,8 @@ Route::get('/artikel5', function () {
 });
 Route::get('/artikel6', function () {
     return view('artikel.artikel6');
+});
+});
+Route::group(['middleware' => ['auth','cekLevel:admin']],function(){
+    Route::get('/', 'HomeAdminController@index');
 });
