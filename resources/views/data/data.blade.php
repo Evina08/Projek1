@@ -51,7 +51,7 @@
 									<div class="overlay"></div>
 									<div class="profile-main">
 										<img src="assets/img/user-medium.png" class="img-circle" alt="Avatar">
-										<h3 class="name">Samuel Gold</h3>
+										<h3 class="name">{{ $dt->name }}</h3>
 										<span class="online-status status-available">Available</span>
 									</div>
 									<div class="profile-stat">
@@ -81,7 +81,7 @@
 										</ul>
 									</div>
 									
-									<div class="text-center"><a href="#" class="btn btn-primary">Edit Profile</a></div>
+									<div class="text-center"><a href="/dataUser" class="btn btn-primary">Edit Profile</a></div>
 								</div>
 								<!-- END PROFILE DETAIL -->
 							</div>

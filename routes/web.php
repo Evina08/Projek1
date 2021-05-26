@@ -42,10 +42,11 @@ Route::get('/artikel6', function () {
 Route::get('/data', function () {
     return view('data.data');
 });
+Route::get('/data/{id}','SettingController@index');
 Route::get('/dataUser', 'DataController@data');
 Route::post('dataUser/{users}','DataController@store');
 Route::put('dataUser/{users}','DataController@update');
 });
-// Route::group(['middleware' => ['auth','cekLevel:admin']],function(){
-//     Route::get('/', 'HomeAdminController@index');
-// });
+Route::group(['middleware' => ['auth','cekLevel:admin']],function(){
+    Route::get('/', 'HomeAdminController@index');
+});
