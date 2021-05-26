@@ -15,6 +15,11 @@ class ChatController extends Controller
     public function index()
     {
         return view('chat/index_user');
+        
+    }
+    public function indexadmin()
+    {
+        return view('chat/index_admin');
     }
 
     /**
