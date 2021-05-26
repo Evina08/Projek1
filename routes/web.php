@@ -40,6 +40,7 @@ Route::get('/artikel6', function () {
     return view('artikel.artikel6');
 });
 });
+Route::get('/chat', 'ChatController@index');
 Route::group(['middleware' => ['auth','cekLevel:admin']],function(){
     Route::get('/', 'HomeAdminController@index');
 });

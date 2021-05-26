@@ -67,7 +67,7 @@
                                         <a href="/home" class="nav-item nav-link active">Home</a>
                                         <a href="/edukasi" class="nav-item nav-link">Edukasi</a>
                                         <a href="service.html" class="nav-item nav-link">Filter Kata</a>
-                                        <a href="portfolio.html" class="nav-item nav-link">Chatting</a>
+                                        <a href="/chat" class="nav-item nav-link">Chatting</a>
                                         <a href="single.html" class="nav-item nav-link">Setting</a>
                                         <a href="contact.html" class="nav-item nav-link">Contact</a>
                                         <!-- <div class="nav-item dropdown">
