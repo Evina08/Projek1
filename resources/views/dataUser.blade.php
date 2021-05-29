@@ -42,8 +42,11 @@
               </div>
 
               <div class="form-group">
-                <label for="exampleInputEmail1">Jenis Kelamin</label>
-                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="jenis_kelamin" name="jenis_kelamin">
+                <label for="exampleFormControlSelect1">Jenis Kelamin</label>
+                <select name="jenis_kelamin" class="form-control" id="exampleFormControlSelect1">
+                  <option value="L" @if($dt->jenis_kelamin == 'L') selected @endif>Laki-Laki</option>
+                  <option value="P" @if($dt->jenis_kelamin == 'P') selected @endif>Perempuan</option>
+                </select>
               </div>
 
               <div class="form-group">
@@ -57,10 +60,10 @@
               </div>
 
               <div class="form-group">
-                  <label for="exampleFormControlTextarea1">Avatar</label>
-                  <input type ="file" name="avatar" class="form-control">
-                  
-                </div>
+                <label for="exampleFormControlTextarea1">Avatar</label>
+                <input type="file" name="avatar" class="form-control">
+
+              </div>
 
 
             </div>
@@ -93,8 +96,11 @@
                 </div>
 
                 <div class="form-group">
-                  <label for="exampleInputPassword1">Jenis Kelamin</label>
-                  <input type="text" name="jenis_kelamin" class="form-control datepicker" id="exampleInputPassword1" placeholder="Jenis Kelamin" autocomplete="off" value="{{ $dt->jenis_kelamin}}">
+                  <label for="exampleFormControlSelect1">Jenis Kelamin</label>
+                  <select name="jenis_kelamin" class="form-control" id="exampleFormControlSelect1">
+                    <option value="L" @if($dt->jenis_kelamin == 'L') selected @endif>Laki-Laki</option>
+                    <option value="P" @if($dt->jenis_kelamin == 'P') selected @endif>Perempuan</option>
+                  </select>
                 </div>
 
                 <div class="form-group">
@@ -109,7 +115,7 @@
 
                 <div class="form-group">
                   <label for="exampleFormControlTextarea1">Avatar</label>
-                  <input type ="file" name="avatar" class="form-control" value="{{ $dt->avatar }}">
+                  <input type="file" name="avatar" class="form-control" value="{{ $dt->avatar }}">
                 </div>
 
 

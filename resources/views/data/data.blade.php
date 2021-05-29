@@ -55,29 +55,21 @@
 										<span class="online-status status-available">Available</span>
 									</div>
 									<div class="profile-stat">
-										<div class="row">
-											<div class="col-md-4 stat-item">
-												45 <span>Projects</span>
-											</div>
-											<div class="col-md-4 stat-item">
-												15 <span>Awards</span>
-											</div>
-											<div class="col-md-4 stat-item">
-												2174 <span>Points</span>
-											</div>
-										</div>
+										
 									</div>
 								</div>
 								<!-- END PROFILE HEADER -->
 								<!-- PROFILE DETAIL -->
 								<div class="profile-detail">
 									<div class="profile-info">
-										<h4 class="heading">Basic Info</h4>
+										<h4 class="heading">Profile</h4>
 										<ul class="list-unstyled list-justify">
-											<li>Birthdate <span>24 Aug, 2016</span></li>
-											<li>Mobile <span>(124) 823409234</span></li>
-											<li>Email <span>samuel@mydomain.com</span></li>
-											<li>Website <span><a href="https://www.themeineed.com">www.themeineed.com</a></span></li>
+											<li>Nama <span>{{ $dt->name }}</span></li>
+											<li>No Handphone <span>{{ $dt->no_hp }}</span></li>
+											<li>No Handphone Orang Tua <span>{{ $dt->no_hp_orangtua }}</span></li>
+											<li>Jenis Kelamin <span>{{ $dt->jenis_kelamin }}</a></span></li>
+											<li>Agama <span>{{ $dt->agama }}</span></li>
+											<li>NIK <span>{{ $dt->nik }}</span></li>
 										</ul>
 									</div>
 									
