@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Auth;
 use App\User;
 use App\Data;
@@ -21,6 +22,13 @@ class DataController extends Controller
         $dt = Data::where('users',\Auth::user()->id)->first();
         $cek = Data::where('users',\Auth::user()->id)->count();
         return view('data.data', compact('dt','cek'));
+    }
+    public function tabelData(){
+        $data=Data::all();
+        $value = Cache::rememberForever('datas',function(){
+            return DB::table('datas')->get();
+        });
+        return view('admin.tabelData',['datas'=> $data]);
     }
     public function store(Request $request,$id){
         $this->validate($request,[
@@ -44,8 +52,12 @@ class DataController extends Controller
         $data['created_at'] = date('Y-m-d H:i:s');
         $data['updated_at'] = date('Y-m-d H:i:s');
         
-       
-        Data::insert($data);
+        if($request->hasFile('avatar')){
+            $request->file('avatar')->move('assets/img/',$request->file('avatar')->getClientOriginalName());
+            $data['avatar'] = $request->avatar = $request->file('avatar')->getClientOriginalName();
+            Data::insert($data);
+        }
+        
  
         return redirect('/data')->with('success','Data Diri berhasil diisi');
     }

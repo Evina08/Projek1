@@ -42,12 +42,12 @@
               </div>
 
               <div class="form-group">
-                <label for="exampleFormControlSelect1">Jenis Kelamin</label>
-                <select name="jenis_kelamin" class="form-control" id="exampleFormControlSelect1">
-                  <option value="L" @if($dt->jenis_kelamin == 'L') selected @endif>Laki-Laki</option>
-                  <option value="P" @if($dt->jenis_kelamin == 'P') selected @endif>Perempuan</option>
-                </select>
-              </div>
+                  <label for="exampleFormControlSelect1">Jenis Kelamin</label>
+                  <select name="jenis_kelamin" class="form-control" id="exampleFormControlSelect1">
+                    <option value="L" >Laki-Laki</option>
+                    <option value="P" >Perempuan</option>
+                  </select>
+                </div>
 
               <div class="form-group">
                 <label for="exampleInputEmail1">Agama</label>
