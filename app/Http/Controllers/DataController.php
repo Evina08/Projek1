@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 use App\User;
 use App\Data;
 
@@ -15,6 +16,11 @@ class DataController extends Controller
         $dt = Data::where('users',\Auth::user()->id)->first();
         $cek = Data::where('users',\Auth::user()->id)->count();
         return view('dataUser', compact('dt','cek'));
+    }
+    public function lihatData(){
+        $dt = Data::where('users',\Auth::user()->id)->first();
+        $cek = Data::where('users',\Auth::user()->id)->count();
+        return view('data.data', compact('dt','cek'));
     }
     public function store(Request $request,$id){
         $this->validate($request,[
@@ -37,10 +43,11 @@ class DataController extends Controller
         $data['avatar'] = $request->avatar;
         $data['created_at'] = date('Y-m-d H:i:s');
         $data['updated_at'] = date('Y-m-d H:i:s');
- 
+        
+       
         Data::insert($data);
  
-        return redirect()->back()->with('success','Data Diri berhasil diisi');
+        return redirect('/data')->with('success','Data Diri berhasil diisi');
     }
  
     public function update(Request $request,$id){
@@ -65,12 +72,14 @@ class DataController extends Controller
         $data['avatar'] = $request->avatar;
         $data['created_at'] = date('Y-m-d H:i:s');
         $data['updated_at'] = date('Y-m-d H:i:s');
- 
-
-        Data::where('users',$id)->update($data);
- 
+        
+        if($request->hasFile('avatar')){
+            $request->file('avatar')->move('assets/img/',$request->file('avatar')->getClientOriginalName());
+            $data['avatar'] = $request->avatar = $request->file('avatar')->getClientOriginalName();
+            Data::where('users',$id)->update($data);
+        }
         // Session::flash('sukses','Data berhasil diupdate');
  
-        return redirect()->back()->with('success','Data Diri Siswa  diupdate');
+        return redirect('/data')->with('success','Data Diri Siswa  diupdate');
     }
 }

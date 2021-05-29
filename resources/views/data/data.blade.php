@@ -6,17 +6,17 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
-                            <h2>Edukasi</h2>
+                            <h2>Setting</h2>
                         </div>
                         <div class="col-12">
-                            <a href="">Home</a>
-                            <a href="">Edukasi</a>
+                            <a href="/home">Home</a>
+                            <a href="">Setting</a>
                         </div>
                     </div>
                 </div>
             </div>
 <head>
-	<title>Profile | Klorofil - Free Bootstrap Dashboard Template</title>
+	
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
@@ -50,7 +50,7 @@
 								<div class="profile-header">
 									<div class="overlay"></div>
 									<div class="profile-main">
-										<img src="assets/img/user-medium.png" class="img-circle" alt="Avatar">
+										<img src="{{asset('assets/img/'.$dt->avatar)}}" class="img-circle" height = "100" width= "100" alt="Avatar">
 										<h3 class="name">{{ $dt->name }}</h3>
 										<span class="online-status status-available">Available</span>
 									</div>

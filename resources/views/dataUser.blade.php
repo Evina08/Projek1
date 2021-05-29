@@ -3,26 +3,26 @@
 @section('content')
 <main>
   <div class="container-fluid">
-    <h1 class="mt-4">Biodata Siswa</h1>
+    <h1 class="mt-4">Biodata User</h1>
     <ol class="breadcrumb mb-4">
       <li class="breadcrumb-item">
-      <a href="/">Siswa</a>
+        <a href="/">User</a>
       </li>
       <li class="breadcrumb-item">
-      <a href="/">Biodata</a>
+        <a href="/">Biodata</a>
       </li>
-      <li class="breadcrumb-item active">Data Siswa</li>
+      <li class="breadcrumb-item active">Data User</li>
     </ol>
   </div>
 </main>
 <div class="row">
   <div class="col-md-12">
     <div class="container-fluid">
-      <h4>Input Biodata Siswa</h4>
+      <h4>Input Biodata User</h4>
       <div class="box box-warning">
         <div class="box-body">
 
-          @if($cek < 1) <form role="form" method="post" action="{{ url('/dataUser/'.\Auth::user()->id) }}">
+          @if($cek < 1) <form role="form" method="post" enctype="multipart/form-data" action="{{ url('/dataUser/'.\Auth::user()->id) }}">
             @csrf
             <div class="box-body">
 
@@ -40,7 +40,7 @@
                 <label for="exampleInputPassword1">No Handphone Ortu</label>
                 <input type="number" name="no_hp_orangtua" class="form-control" id="exampleInputPassword1" placeholder="No Handphone Orang Tua">
               </div>
-              
+
               <div class="form-group">
                 <label for="exampleInputEmail1">Jenis Kelamin</label>
                 <input type="text" class="form-control" id="exampleInputEmail1" placeholder="jenis_kelamin" name="jenis_kelamin">
@@ -57,9 +57,11 @@
               </div>
 
               <div class="form-group">
-                <label for="exampleInputPassword1">Avatar</label>
-                <textarea name="avatar" rows="5" class="form-control"></textarea>
-              </div>
+                  <label for="exampleFormControlTextarea1">Avatar</label>
+                  <input type ="file" name="avatar" class="form-control">
+                  
+                </div>
+
 
             </div>
             <!-- /.box-body -->
@@ -71,7 +73,7 @@
 
             @else
 
-            <form role="form" method="post" action="{{ url('/dataUser/'.\Auth::user()->id) }}">
+            <form role="form" method="post" enctype="multipart/form-data" action="{{ url('/dataUser/'.\Auth::user()->id) }}">
               @csrf
               {{ method_field('PUT') }}
               <div class="box-body">
@@ -106,8 +108,8 @@
                 </div>
 
                 <div class="form-group">
-                  <label for="exampleInputPassword1">Avatar</label>
-                  <textarea name="alamat" rows="5" class="form-control" >{{ $dt->avatar }}</textarea>
+                  <label for="exampleFormControlTextarea1">Avatar</label>
+                  <input type ="file" name="avatar" class="form-control" value="{{ $dt->avatar }}">
                 </div>
 
 
@@ -117,6 +119,9 @@
               <div class="box-footer">
                 <button type="submit" class="btn btn-primary">Update</button>
               </div>
+
+              <div class="text-center"><a href="/data" class="btn btn-primary">Go To Profile</a></div>
+
             </form>
 
             @endif
