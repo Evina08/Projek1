@@ -42,6 +42,8 @@ Route::get('/artikel6', function () {
 });
 Route::get('/chat', 'ChatController@index');
 Route::get('/chat_admin', 'ChatController@indexadmin');
+Route::post('/send_pesan_user', 'ChatController@send_pesan_user');
+Route::post('/send_pesan_admin', 'ChatController@send_pesan_admin');
 Route::group(['middleware' => ['auth','cekLevel:admin']],function(){
     Route::get('/', 'HomeAdminController@index');
 });

@@ -56,45 +56,36 @@
                             <a href="">Chatting</a>
                         </div>
                     </div>
+                  </div>
                 </div>
-</div>
+                <form action="/send_pesan_user" method="POST">
+                  @csrf
  <div class="portfolio">
      <div class="col-12">
          <div class="row">
-    <div class="container containerku">
-        Admin
-        <p>Hello. How are you today?</p>
-        <span class="time-right">11:00</span>
-      </div>
+           @foreach ($data as $item)
+           <div class="container containerku <?php if($item->type=='user'){echo "darker";} ?>">
+            <?php if($item->type=='user'){ ?>
+              You
+              <?php }else{?>
+                Admin
+                <?php }?>
+            <p>{{$item->comment}}</p>
+          </div>
+           @endforeach
       
-      <div class="container containerku darker">
-        You
-        <p>Hey! I'm fine. Thanks for asking!</p>
-        <span class="time-left">11:01</span>
-      </div>
-      
-      <div class="container containerku">
-        Admin
-        <p>Sweet! So, what do you wanna do today?</p>
-        <span class="time-right">11:02</span>
-      </div>
-      
-      <div class="container containerku darker">
-        You
-        <p>Nah, I dunno. Play soccer.. or learn more coding perhaps?</p>
-        <span class="time-left">11:05</span>
-      </div> 
       <div class="container p-0" style="margin-top: 15px">
           <div class="row">
           <div class="col-11">
-        <input type="text" class="form-control" placeholder="Say hi...........">
+        <input type="text" name="comment" class="form-control" placeholder="Say hi...........">
     </div>
     <div class="col-1">
-        <button class="btn btn-primary">Send</button>
+        <button type="submit" class="btn btn-primary">Send</button>
     </div>
-      </div>
-    </div>
-         </div>
+  </div>
+</div>
+</div>
+</form>
          
      </div>
 </div>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Chat;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class ChatController extends Controller
 {
@@ -15,7 +16,8 @@ class ChatController extends Controller
      */
     public function index()
     {
-        return view('chat/index_user');
+        $data = DB::table('chats')->where('type','user')->where('id_user', Auth::id())->get();
+        return view('chat/index_user', ['data' => $data]);
     }
     public function indexadmin()
     {
@@ -38,23 +40,25 @@ class ChatController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store_user(Request $request)
+    public function send_pesan_user(Request $request)
     {
         $data = new \App\Chat;
         $data->id_user = Auth::id();
         $data->comment = $request->comment;
+        $data->type = 'user';
 
         $data->save();
         return redirect('/chat');
     }
-    public function store_admin(Request $request)
+    public function send_pesan_admin(Request $request)
     {
         $data = new \App\Chat;
-        $data->id_user = $request->user_id;
+        $data->id_user = $request->id_user;
         $data->comment = $request->comment;
+        $data->type = 'admin';
 
         $data->save();
-        return redirect('/chat');
+        return redirect('/chat_admin');
     }
 
     /**
