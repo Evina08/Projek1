@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>NoCyb - Say No To Cyber Bullying</title>
-        
+
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <meta content="Say No To Cyber Bullying" name="keywords">
         <meta content="Say No To Cyber Bullying" name="description">
@@ -12,7 +12,7 @@
 
         <!-- Google Font -->
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400&display=swap" rel="stylesheet">
-        
+
         <!-- CSS Libraries -->
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -33,7 +33,7 @@
                         <div class="brand">
                                 <a href="#">
                                     NoCyb
-                                    
+
                                 </a>
                             </div>
                         </div>
@@ -43,7 +43,7 @@
                                     <a href="tel:+85960208432"><i class="fa fa-phone-alt"></i>+85960208432</a>
                                 </div>
                                 <div class="topbar-col">
-                                    <a href="mailto:evdinda08@gmail.com"><i class="fa fa-envelope"></i>info@gmail.com</a>
+                                    <a href="mailto:evdinda08@gmail.com"><i class="fa fa-envelope"></i>nocyb@gmail.com</a>
                                 </div>
                                 <div class="topbar-col">
                                     <div class="topbar-social">
@@ -65,11 +65,8 @@
                                     <div class="navbar-nav ml-auto">
                                         <a href="/home" class="nav-item nav-link ">Home</a>
                                         <a href="/edukasi" class="nav-item nav-link active">Edukasi</a>
-                                        <a href="service.html" class="nav-item nav-link">Filter Kata</a>
-                                        <a href="portfolio.html" class="nav-item nav-link">Chatting</a>
+                                        <a href="" class="nav-item nav-link">Chatting</a>
                                         <a href="/dataUser" class="nav-item nav-link">Setting</a>
-                                        <a href="contact.html" class="nav-item nav-link">Contact</a>
-                                       
                                     </div>
                                 </div>
                                 <ul class="navbar-nav ml-auto">
@@ -91,8 +88,8 @@
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
+                                        onclick="event.preventDefault();
+                                        document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
 
@@ -109,8 +106,8 @@
                 </div>
             </div>
             <!-- Header End -->
-            
-            
+
+
             <!-- Page Header Start -->
             @yield('content')
 
@@ -119,10 +116,10 @@
                     <div class="row">
                         <div class="col-md-6 col-lg-3">
                             <div class="footer-contact">
-                                <h2>Kontak</h2>
+                                <h2>Contact</h2>
 
                                 <p><i class="fa fa-phone-alt"></i>+012 345 67890</p>
-                                <p><i class="fa fa-envelope"></i>info@example.com</p>
+                                <p><i class="fa fa-envelope"></i>nocyb@example.com</p>
                                 <div class="footer-social">
                                     <a href=""><i class="fab fa-twitter"></i></a>
                                     <a href=""><i class="fab fa-facebook-f"></i></a>
@@ -166,11 +163,11 @@
                 </div>
                 <div class="container footer-menu">
                     <div class="f-menu">
-                    <a href="">Edukasi</a>
-                                <a href="">Filter Kata</a>
-                                <a href="">Chatting</a>
-                                <a href="">Setting</a>
-                                <a href="">Contact Us</a>
+                        <a href="">Edukasi</a>
+                        <a href="">Filter Kata</a>
+                        <a href="">Chatting</a>
+                        <a href="">Setting</a>
+                        <a href="">Contact Us</a>
                     </div>
                 </div>
                 <div class="container copyright">
@@ -185,7 +182,7 @@
                 </div>
             </div>
             <!-- Footer End -->
-            
+
             <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
         </div>
 

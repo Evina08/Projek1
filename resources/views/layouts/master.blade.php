@@ -44,7 +44,7 @@
                                     <a href="tel:+85960208432"><i class="fa fa-phone-alt"></i>+85960208432</a>
                                 </div>
                                 <div class="topbar-col">
-                                    <a href="mailto:evdinda08@gmail.com"><i class="fa fa-envelope"></i>info@gmail.com</a>
+                                    <a href="mailto:evdinda08@gmail.com"><i class="fa fa-envelope"></i>nocyb@gmail.com</a>
                                 </div>
                                 <div class="topbar-col">
                                     <div class="topbar-social">
@@ -66,10 +66,8 @@
                                     <div class="navbar-nav ml-auto">
                                         <a href="/home" class="nav-item nav-link active">Home</a>
                                         <a href="/edukasi" class="nav-item nav-link">Edukasi</a>
-                                        <a href="service.html" class="nav-item nav-link">Filter Kata</a>
-                                        <a href="portfolio.html" class="nav-item nav-link">Chatting</a>
+                                        <a href="" class="nav-item nav-link">Chatting</a>
                                         <a href="/dataUser" class="nav-item nav-link">Setting</a>
-                                        <a href="contact.html" class="nav-item nav-link">Contact</a>
                                         <!-- <div class="nav-item dropdown">
                                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Dropdown</a>
                                             <div class="dropdown-menu">
@@ -159,7 +157,7 @@
                                 <h2>Kontak</h2>
 
                                 <p><i class="fa fa-phone-alt"></i>+012 345 67890</p>
-                                <p><i class="fa fa-envelope"></i>info@example.com</p>
+                                <p><i class="fa fa-envelope"></i>nocyb@example.com</p>
                                 <div class="footer-social">
                                     <a href=""><i class="fab fa-twitter"></i></a>
                                     <a href=""><i class="fab fa-facebook-f"></i></a>
