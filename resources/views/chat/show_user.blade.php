@@ -49,27 +49,44 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
-                            <h2>Chatting Admin</h2>
+                            <h2>Chatting</h2>
                         </div>
                         <div class="col-12">
                             <a href="">Home</a>
                             <a href="">Chatting</a>
                         </div>
                     </div>
+                  </div>
                 </div>
-</div>
+                <form action="/send_pesan_admin" method="POST">
+                  @csrf
  <div class="portfolio">
      <div class="col-12">
          <div class="row">
-           <ol>
-         @foreach ($data as $item)
-           <a href="/showuser/{{$item->id_user}}"><li>{{$item->name}}</li></a>
+           @foreach ($data as $item)
+           <div class="container containerku <?php if($item->type=='admin'){echo "darker";} ?>">
+            <?php if($item->type=='admin'){ ?>
+              You
+              <?php }else{?>
+                {{$item->name}}
+                <?php }?>
+            <p>{{$item->comment}}</p>
+          </div>
            @endforeach
-           </ol>
       
-     
+      <div class="container p-0" style="margin-top: 15px">
+          <div class="row">
+          <div class="col-11">
+          <input type="hidden" name="id_user" value="{{$id_user}}">
+        <input type="text" name="comment" class="form-control" placeholder="Say hi...........">
     </div>
-         </div>
+    <div class="col-1">
+        <button type="submit" class="btn btn-primary">Send</button>
+    </div>
+  </div>
+</div>
+</div>
+</form>
          
      </div>
 </div>

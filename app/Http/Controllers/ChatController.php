@@ -21,12 +21,16 @@ class ChatController extends Controller
     }
     public function indexadmin()
     {
-        $data = DB::table('chats')->groupby('id_user')->get();
+        $data = DB::table('chats')
+        ->select('users.name','chats.id_user')
+        ->leftJoin('users', 'users.id', '=', 'chats.id_user')
+        ->groupby('id_user','users.name')->get();
         return view('chat/index_admin', ['data' => $data]);
     }
     public function showuser(Request $request){
-        $data = DB::table('chats')->where('id_user', $request->id_user)->get();
-        return view('chat/show_user', ['data' => $data]);
+        $data = DB::table('chats')->select('chats.*','users.name')
+        ->leftJoin('users', 'users.id', '=', 'chats.id_user')->where('id_user', $request->id_user)->get();
+        return view('chat/show_user', ['data' => $data,'id_user' => $request->id_user]);
     }
     /**
      * Show the form for creating a new resource.
@@ -62,7 +66,7 @@ class ChatController extends Controller
         $data->type = 'admin';
 
         $data->save();
-        return redirect('/chat_admin');
+        return redirect('/showuser/'.$request->id_user);
     }
 
     /**
