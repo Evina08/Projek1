@@ -65,7 +65,7 @@
                             <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                                 <div class="navbar-nav ml-auto">
                                     <a href="/home" class="nav-item nav-link active">Home</a>
-                                    <a href="" class="nav-item nav-link ">Data User</a>
+                                    <a href="/tabelData" class="nav-item nav-link ">Data User</a>
                                     <a href="service.html" class="nav-item nav-link">Filter Kata</a>
                                     <a href="/chat_admin" class="nav-item nav-link">Chatting</a>
                                     <a href="contact.html" class="nav-item nav-link">Pendampingan</a>

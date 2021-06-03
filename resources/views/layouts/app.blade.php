@@ -8,7 +8,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>NoCyb</title>
-
+    <link href="img/logo.png" rel="icon">
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
 
@@ -26,6 +26,7 @@
                 <a class="navbar-brand" href="{{ url('/') }}">
                     NoCyb
                 </a>
+                <link href="img/logo.png" rel="icon">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
