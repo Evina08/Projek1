@@ -16,14 +16,18 @@ class ChatController extends Controller
      */
     public function index()
     {
-        $data = DB::table('chats')->where('type','user')->where('id_user', Auth::id())->get();
+        $data = DB::table('chats')->where('id_user', Auth::id())->get();
         return view('chat/index_user', ['data' => $data]);
     }
     public function indexadmin()
     {
-        return view('chat/index_admin');
+        $data = DB::table('chats')->groupby('id_user')->get();
+        return view('chat/index_admin', ['data' => $data]);
     }
-
+    public function showuser(Request $request){
+        $data = DB::table('chats')->where('id_user', $request->id_user)->get();
+        return view('chat/show_user', ['data' => $data]);
+    }
     /**
      * Show the form for creating a new resource.
      *
