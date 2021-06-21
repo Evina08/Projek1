@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -9,19 +9,19 @@
     <meta content="Say No To Cyber Bullying" name="keywords">
     <meta content="Say No To Cyber Bullying" name="description">
     <!-- Favicon -->
-    <link href="img/logo.png" rel="icon">
+<link href="img/logo.png" rel="icon">
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400&display=swap" rel="stylesheet">
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400&display=swap" rel="stylesheet">
 
-    <!-- CSS Libraries -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+<!-- CSS Libraries -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+<link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+<link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
 
-    <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
+<!-- Template Stylesheet -->
+<link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -58,7 +58,8 @@
                         </div>
                         <div class="navbar navbar-expand-lg bg-light navbar-light">
                             <a href="#" class="navbar-brand">MENU</a>
-                            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                            <button type="button" class="navbar-toggler" data-toggle="collapse"
+                                data-target="#navbarCollapse">
                                 <span class="navbar-toggler-icon"></span>
                             </button>
 
@@ -75,31 +76,36 @@
                             <ul class="navbar-nav ml-auto">
                                 <!-- Authentication Links -->
                                 @guest
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                                </li>
-                                @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
-                                @endif
+                                    <li class="nav-item">
+                                        <a class="nav-link"
+                                            href="{{ route('login') }}">{{ __('Login') }}</a>
+                                    </li>
+                                    @if(Route::has('register'))
+                                        <li class="nav-item">
+                                            <a class="nav-link"
+                                                href="{{ route('register') }}">{{ __('Register') }}</a>
+                                        </li>
+                                    @endif
                                 @else
-                                <li class="nav-item dropdown">
-                                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                        {{ Auth::user()->name }} <span class="caret"></span>
-                                    </a>
-
-                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                            {{ __('Logout') }}
+                                    <li class="nav-item dropdown">
+                                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                            {{ Auth::user()->name }} <span class="caret"></span>
                                         </a>
 
-                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                            @csrf
-                                        </form>
-                                    </div>
-                                </li>
+                                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                            <a class="dropdown-item" href="{{ route('logout') }}"
+                                                onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                                {{ __('Logout') }}
+                                            </a>
+
+                                            <form id="logout-form" action="{{ route('logout') }}"
+                                                method="POST" style="display: none;">
+                                                @csrf
+                                            </form>
+                                        </div>
+                                    </li>
                                 @endguest
                             </ul>
                         </div>
@@ -200,4 +206,4 @@
     <script src="js/main.js"></script>
 </body>
 
-</html>
+</html> -->

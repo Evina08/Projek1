@@ -64,10 +64,11 @@
 
                                 <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                                     <div class="navbar-nav ml-auto">
-                                        <a href="/home" class="nav-item nav-link active">Home</a>
-                                        <a href="/edukasi" class="nav-item nav-link">Edukasi</a>
-                                        <a href="" class="nav-item nav-link">Chatting</a>
-                                        <a href="/dataUser" class="nav-item nav-link">Setting</a>
+                                        <a href="/home" class="{{ (request()->segment(1) == 'home') ? 'active' : '' }} nav-item nav-link ">Home</a>
+                                        <a href="/edukasi" class="{{ (request()->segment(1) == 'edukasi') ? 'active' : '' }} nav-item nav-link ">Edukasi</a>
+                                        <a href="" class="{{ (request()->segment(1) == 'chatting') ? 'active' : '' }} nav-item nav-link">Chatting</a>
+                                        <a href="/dataUser" class="{{ (request()->segment(1) == 'dataUser') ? 'active' : '' }}nav-item nav-link">Setting</a>
+
                                         <!-- <div class="nav-item dropdown">
                                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Dropdown</a>
                                             <div class="dropdown-menu">

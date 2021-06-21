@@ -25,4 +25,8 @@ class HomeAdminController extends Controller
     {
         return view('admin.homeAdmin');
     }
+    public function pendampingan()
+    {
+        return view('admin.pendampingan');
+    }
 }

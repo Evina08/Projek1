@@ -39,6 +39,7 @@ Route::group(['middleware' => ['auth', 'cekLevel:user']], function () {
     Route::get('/artikel6', function () {
         return view('artikel.artikel6');
     });
+
     // Route::get('/data', function () {
     //     return view('data.data');
     // });
@@ -49,6 +50,7 @@ Route::group(['middleware' => ['auth', 'cekLevel:user']], function () {
     Route::put('dataUser/{users}', 'DataController@update');
 });
 Route::group(['middleware' => ['auth', 'cekLevel:admin']], function () {
-    Route::get('/', 'HomeAdminController@index');
+    Route::get('/admin', 'HomeAdminController@index');
     Route::get('/tabelData', 'DataController@tabelData');
+    Route::get('/pendampingan', 'HomeAdminController@pendampingan');
 });

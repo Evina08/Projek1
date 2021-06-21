@@ -1,6 +1,6 @@
-/*	
+/*
 *	############################################################################################
-*	
+*
 *	KLOROFIL - Free Bootstrap Dashboard Template
 *	---------------------------------------------------------------------
 *
@@ -9,7 +9,7 @@
 *	Website: 	https://www.themeineed.com/
 *	Copyright: 	Copyright 2016 The Develovers
 *	License: 	Creative Common Attribution 4.0 https://creativecommons.org/licenses/by/4.0/
-*	
+*
 *	############################################################################################
 */
 /********************
@@ -151,7 +151,7 @@ html.fullscreen-bg #wrapper {
 /********************
  * TOP NAVIGATION
  ********************/
-.navbar-default {
+/* .navbar-default {
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -ms-transition: all 0.3s ease-in-out;
@@ -311,8 +311,8 @@ html.fullscreen-bg #wrapper {
   padding: 5px 8px;
   margin: 20px 15px 20px 0; }
   .navbar-toggle .icon-nav {
-    font-size: 24px; }
-
+    font-size: 24px; } */
+/*
 .notification-item .dot {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -352,12 +352,12 @@ ul.notifications > li {
   .dropdown-menu .active > a, .dropdown-menu .active > a:focus, .dropdown-menu .active > a:hover {
     background-color: #00AAFF; }
   .dropdown-menu > .disabled > a, .dropdown-menu > .disabled > a:focus, .dropdown-menu > .disabled > a:hover {
-    color: #a3a3a3; }
+    color: #a3a3a3; } */
 
 /********************
  * SIDEBAR NAVIGATION
  ********************/
-.sidebar {
+/* .sidebar {
   z-index: 9; }
   .sidebar .nav > li > a {
     padding: 18px 30px;
@@ -400,7 +400,7 @@ ul.notifications > li {
       font-weight: 400;
       background-color: #F9354C; }
   .sidebar .nav {
-    /* submenu */ }
+    /* submenu */
     .sidebar .nav i {
       margin-right: 10px;
       font-size: 18px; }
@@ -422,7 +422,7 @@ ul.notifications > li {
           background-color: transparent;
           border-left-color: transparent; }
         .sidebar .nav .nav > li > a.active a {
-          color: #fff; }
+          color: #fff; } */
 
 /********************
  * TYPOGRAPHY
@@ -971,7 +971,7 @@ ul.activity-list > li {
 /********************************
  * AUTHENTICATION FORMS, PAGE
  ********************************/
-.auth-box {
+/* .auth-box {
   -moz-box-shadow: 1px 2px 10px 0 rgba(0, 0, 0, 0.1);
   -webkit-box-shadow: 1px 2px 10px 0 rgba(0, 0, 0, 0.1);
   box-shadow: 1px 2px 10px 0 rgba(0, 0, 0, 0.1);
@@ -1103,7 +1103,7 @@ ul.activity-list > li {
       .auth-box .content {
         width: 95%; }
       .auth-box.lockscreen {
-        width: 90%; } }
+        width: 90%; } } */
 
 /********************
  * HELPERS
@@ -1721,7 +1721,6 @@ ul.activity-timeline > li {
     -webkit-border-radius: 30px;
     -moz-border-radius: 30px;
     border-radius: 30px;
-    float: left;
     width: 34px;
     height: 34px;
     background-color: #00AAFF;
