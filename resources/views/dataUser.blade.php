@@ -4,7 +4,7 @@
 <div class="container">
     <main>
         <div class="container-fluid">
-            <h1 class="mt-4">Biodata User</h1>
+            <h1 class="mt-4 font-weight-bold" style="color: darkblue;">Biodata User</h1>
             <ol class="breadcrumb mb-4">
                 <li class="breadcrumb-item">
                     <a href="/">Home</a>
@@ -19,7 +19,7 @@
     <div class="row">
         <div class="col-md-12">
             <div class="container-fluid">
-                <h4>Input Biodata User</h4>
+                <!-- <h4 class="font-weight-bold" style="color: navy;">Input Biodata User</h4> -->
                 <div class="box box-warning">
                     <div class="box-body">
 

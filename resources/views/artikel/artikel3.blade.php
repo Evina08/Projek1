@@ -1,36 +1,37 @@
 @extends('layouts.layout')
 @section('content')
-<div class="page-header">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <h2>Artikel</h2>
-            </div>
-            <div class="col-12">
-                <a href="/home">Home</a>
-                <a href="/edukasi">Artikel</a>
-            </div>
+<div class="container">
+    <main>
+        <div class="container-fluid">
+            <h1 class="mt-0 font-weight-bold" style="color: darkblue;">Edukasi</h1>
+            <ol class="breadcrumb mb-4">
+                <li class="breadcrumb-item">
+                    <a href="/">Home</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <a href="/edukasi">Edukasi</a>
+                </li>
+                <li class="breadcrumb-item active">Kasus Cyber Bullying</li>
+            </ol>
         </div>
-    </div>
+    </main>
 </div>
 <div class="single">
     <div class="container">
         <div class="section-header">
-
             <h2>Kasus Cyber Bullying</h2>
         </div>
         <div class="row">
             <div class="col-12">
-                <img class="img-fluid rounded" src="img/kasus.jpg" alt="Image">
-
-                <h2>Kasus Cyberbullying</h2>
 
                 <p>
                     <center><iframe width="800" height="500" src="https://youtube.com/embed/gXUXsEWFib8" frameborder="1"
                             allow="acelerometer;autoplay;encryted-media;gryoscope;picture-in-picture"
                             allowfullscreen></iframe></center>
                 </p>
-                <p>
+                <h2 style="color: navy;">Kasus Cyberbullying</h2>
+                <hr><br>
+                <p style="text-align:justify;">
                     1. Ryan Halligan adalah remaja biasa umur 13 tahun. Suatu hari cerita memalukan tentang dirinya
                     tersebar di lingkungan sekolahnya. Ryan menerima ejekan setiap hari dari teman-temannya. Sampai
                     puncaknya, ada teman ceweknya yang pura-pura suka sama Ryan biar bisa mendapat lebih banyak lagi
@@ -38,7 +39,7 @@
                     bumbu-bumbu tambahan yang malah berujung fitnah. Ryan pun di-bully nggak hanya di dunia nyata, tapi
                     juga di dunia maya. Karena nggak tahan, Ryan pun gantung diri.
                 </p>
-                <p>
+                <p style="text-align:justify;">
                     2.Gara-gara foto topless-nya disebar orang nggak dikenal, Amanda Todd jadi depresi akut dan
                     memutuskan untuk mengakhiri hidupnya. Amanda Todd bertemu orang asing, di internet saat masih kelas
                     7 melalui videocam, orang asing ini meminta amanda untuk memperlihatkan payudaranya, dan orang asing
@@ -47,13 +48,13 @@
                     dituruti, foto payudaranya akan disebar. Karena menolak permintaan orang asing itu, foto syur Amanda
                     jadi benar-benar tersebar di internet dan jadi bahan perbincangan semua orang di sekolahnya.
                 </p>
-                <p>
+                <p style="text-align:justify;">
                     3. Audrie Pott dilecehkan oleh teman-teman prianya. Wajah dan tubuhnya dicoret-coret, dan dijadikan
                     objek foto. Keesokan harinya, foto-foto Audrie tanpa busana tersebar luas di internet. Teman-teman
                     sekolahnya menjadikannya bahan bercanda. Nggak kuat menanggung malu, seminggu setelah kejadian itu
                     Audrie bunuh diri.
                 </p>
-                <p>
+                <p style="text-align:justify;">
                     4.Tyler Clementi adalah mahasiswa Rutgers University yang tinggal sekamar dengan dua temannya. Suatu
                     hari, Tyler minta teman sekamarnya itu untuk meninggalkan dia di kamar karena Tyler lagi pengen
                     sendiri. Karena penasaran dengan apa yang akan dilakukan Tyler, dua temannya yang bernama Dharun
@@ -61,7 +62,7 @@
                     sesama jenis. Seluruh kampus langsung tahu kalau Tyler gay. Karena berat menanggung malu, Tyler
                     memutuskan lompat dari jembatan George Washington.
                 </p>
-                <p>
+                <p style="text-align:justify;">
                     5. Pada tahun 2016,brandy Vela remaja asal texas, memutuskan menembak dadanya sendiri karena nggak
                     tahan di-bully terus-terusan lewat pesan-pesan kasar yang dia terima di ponselnya.
                 </p>

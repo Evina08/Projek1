@@ -8,6 +8,7 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Say No To Cyber Bullying" name="keywords">
     <meta content="Say No To Cyber Bullying" name="description">
+
     <!-- Favicon -->
     <link href="img/logo.png" rel="icon">
 
@@ -20,21 +21,6 @@
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
 
-    <!-- VENDOR CSS -->
-    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/vendor/linearicons/style.css">
-
-    <!-- MAIN CSS -->
-    <link rel="stylesheet" href="assets/css/main.css">
-    <!-- FOR DEMO PURPOSES ONLY. You should remove this in your project -->
-    <!-- <link rel="stylesheet" href="assets/css/demo.css"> -->
-    <!-- GOOGLE FONTS -->
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
-    <!-- ICONS -->
-    <link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon.png">
-
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
 </head>
@@ -42,7 +28,7 @@
 <body>
     <div class="wrapper">
         <!-- Header Start -->
-        <div class="header">
+        <div class="header home">
             <div class="container-fluid">
                 <div class="header-top row align-items-center">
                     <div class="col-lg-3">
@@ -62,11 +48,11 @@
                             </div>
                             <div class="topbar-col">
                                 <div class="topbar-social">
-                                    <a href=""><i class="fab fa-twitter"></i></a>
-                                    <a href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a href=""><i class="fab fa-youtube"></i></a>
-                                    <a href=""><i class="fab fa-instagram"></i></a>
-                                    <a href=""><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#"><i class="fab fa-youtube"></i></a>
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -80,67 +66,81 @@
                             <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                                 <div class="navbar-nav ml-auto">
                                     <a href="/home"
-                                        class="{{ (request()->segment(1) == 'home') ? 'active' : '' }} nav-item nav-link">Home</a>
+                                        class="{{ (request()->segment(1) == 'home') ? 'active' : '' }} nav-item nav-link ">Home</a>
                                     <a href="/edukasi"
-                                        class="{{ (request()->segment(1) == 'edukasi') ? 'active' : '' }} nav-item nav-link">Edukasi</a>
+                                        class="{{ (request()->segment(1) == 'edukasi') ? 'active' : '' }} nav-item nav-link ">Edukasi</a>
                                     <a href=""
                                         class="{{ (request()->segment(1) == 'chatting') ? 'active' : '' }} nav-item nav-link">Chatting</a>
                                     <a href="/dataUser"
                                         class="{{ (request()->segment(1) == 'dataUser') ? 'active' : '' }}nav-item nav-link">Setting</a>
+
+                                    <!-- <div class="nav-item dropdown">
+                                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Dropdown</a>
+                                            <div class="dropdown-menu">
+                                                <a href="#" class="dropdown-item">Sub Item 1</a>
+                                                <a href="#" class="dropdown-item">Sub Item 2</a>
+                                            </div>
+                                        </div> -->
+                                    <!-- <a href="#" class="btn">Get A Quote</a> -->
+                                    <ul class="navbar-nav ml-auto">
+                                        <!-- Authentication Links -->
+                                        @guest
+                                            <li class="nav-item">
+                                                <a class="nav-link"
+                                                    href="{{ route('login') }}">{{ __('Login') }}</a>
+                                            </li>
+                                            @if(Route::has('register'))
+                                                <li class="nav-item">
+                                                    <a class="nav-link"
+                                                        href="{{ route('register') }}">{{ __('Register') }}</a>
+                                                </li>
+                                            @endif
+                                        @else
+                                            <li class="nav-item dropdown">
+                                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#"
+                                                    role="button" data-toggle="dropdown" aria-haspopup="true"
+                                                    aria-expanded="false" v-pre>
+                                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                                </a>
+
+                                                <div class="dropdown-menu dropdown-menu-right"
+                                                    aria-labelledby="navbarDropdown">
+                                                    <a class="dropdown-item"
+                                                        href="{{ route('logout') }}"
+                                                        onclick="event.preventDefault();
+                                                                            document.getElementById('logout-form').submit();">
+                                                        {{ __('Logout') }}
+                                                    </a>
+
+                                                    <form id="logout-form"
+                                                        action="{{ route('logout') }}" method="POST"
+                                                        style="display: none;">
+                                                        @csrf
+                                                    </form>
+                                                </div>
+                                            </li>
+                                        @endguest
+                                    </ul>
                                 </div>
                             </div>
-                            <ul class="navbar-nav ml-auto">
-                                <!-- Authentication Links -->
-                                @guest
-                                    <li class="nav-item">
-                                        <a class="nav-link"
-                                            href="{{ route('login') }}">{{ __('Login') }}</a>
-                                    </li>
-                                    @if(Route::has('register'))
-                                        <li class="nav-item">
-                                            <a class="nav-link"
-                                                href="{{ route('register') }}">{{ __('Register') }}</a>
-                                        </li>
-                                    @endif
-                                @else
-                                    <li class="nav-item dropdown">
-                                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
-                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                            {{ Auth::user()->name }} <span class="caret"></span>
-                                        </a>
-
-                                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                            <a class="dropdown-item" href="{{ route('logout') }}"
-                                                onclick="event.preventDefault();
-                                        document.getElementById('logout-form').submit();">
-                                                {{ __('Logout') }}
-                                            </a>
-
-                                            <form id="logout-form" action="{{ route('logout') }}"
-                                                method="POST" style="display: none;">
-                                                @csrf
-                                            </form>
-                                        </div>
-                                    </li>
-                                @endguest
-                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <!-- Header End -->
-
-
-        <!-- Page Header Start -->
         @yield('content')
 
+        <!-- Blog End -->
+
+
+        <!-- Footer Start -->
         <div class="footer">
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 col-lg-3">
                         <div class="footer-contact">
-                            <h2>Contact</h2>
+                            <h2>Kontak</h2>
 
                             <p><i class="fa fa-phone-alt"></i>+012 345 67890</p>
                             <p><i class="fa fa-envelope"></i>nocyb@example.com</p>
